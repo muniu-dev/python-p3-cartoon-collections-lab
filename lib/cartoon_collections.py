@@ -1,19 +1,22 @@
-def display_dwarves(names_list):
-    for index, name in enumerate(names_list):
-        print(f"{index + 1}. {name}")
+def roll_call_dwarves(dwarves):
+    for i, dwarf in enumerate(dwarves, start=1):
+        print(f"{i}. {dwarf}")
 
-def summon_captain_planet(elements_list):
-    return [element.capitalize() + "!" for element in elements_list]
+def summon_captain_planet(planeteer_calls):
+    result = []
+    for call in planeteer_calls:
+        result.append(call.capitalize() + "!")
+    return result
 
-def has_long_call(calls_list):
-    for call in calls_list:
+def long_planeteer_calls(calls):
+    for call in calls:
         if len(call) > 4:
             return True
     return False
 
-def find_cheese(strings_list):
+def find_the_cheese(snacks):
     cheeses = ["cheddar", "gouda", "camembert"]
-    for word in strings_list:
-        if word in cheeses:
-            return word
+    for snack in snacks:
+        if snack in cheeses:
+            return snack
     return None
